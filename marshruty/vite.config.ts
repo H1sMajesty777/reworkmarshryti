@@ -3,7 +3,20 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
 
-import siteConfiguration from './.figma/make/site.json'
+const siteConfiguration: {
+  title?: string
+  description?: string
+  language?: string
+  robots?: { index?: boolean }
+  icons?: { icon?: string }
+  openGraph?: { image?: string }
+  analytics?: { googleAnalyticsId?: string }
+  customScripts?: { headStart?: string; headEnd?: string; bodyStart?: string; bodyEnd?: string }
+  accessibility?: { addBypassLinks?: boolean }
+} = {
+  title: 'Иду — маршруты по городу',
+  language: 'ru',
+}
 
 
 // Vite config — https://vitejs.dev/config/
